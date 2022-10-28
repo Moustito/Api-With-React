@@ -1,8 +1,7 @@
-import { useState } from "react";
 import List from "./List";
 import Spotlight from "./Spotlight";
 
-function Home() {
+export default function Home() {
   //State
 
   //Comportements
@@ -16,5 +15,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;
