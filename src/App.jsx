@@ -1,21 +1,22 @@
 import "./App.css";
-import { useState } from "react";
-import Api from "./Components/Api";
-import List from "./Components/List";
-import Spotlight from "./Components/Spotlight";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Components/Home";
+import NavBar from "./Components/NavBar";
+import Category from "./Components/Category";
 
 function App() {
   //State
-  const [loading, setLoading] = useState(false);
 
   //Comportements
 
   //Render
   return (
     <div className="App">
-      <h1>APP API</h1>
-      <List />
-      <Spotlight />
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/category" element={<Category />} />
+      </Routes>
     </div>
   );
 }
